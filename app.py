@@ -4,14 +4,14 @@ from io import StringIO
 import csv
 import pandas as pd
 import numpy as np
-import pickle
+import joblib
 
 app = Flask(__name__)
 
 input_file = 'model.bin'
 
 with open(input_file, 'rb') as f_in:
-    sc, model = pickle.load(f_in)
+    sc, model = joblib.load(f_in)
 
 
 def transform(text_file_contents):
