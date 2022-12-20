@@ -4,18 +4,21 @@ from io import StringIO
 import csv
 import pandas as pd
 import numpy as np
-import joblib
+import dill
 
 app = Flask(__name__)
 
-input_file = 'model.bin'
+#input_file = 'model.bin'
 
-with open(input_file, 'rb') as f_in:
-    sc, model = joblib.load(f_in)
+#with open(input_file, 'rb') as f_in:
+#    sc, model = joblib.load(f_in)
 
 
 def transform(text_file_contents):
     return text_file_contents.replace("=", ",")
+
+
+dill.load_module('sc_mode.pkl')
 
 
 @app.route('/')
