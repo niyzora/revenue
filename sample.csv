@@ -1,0 +1,81 @@
+,value
+host_response_rate,86.0
+host_acceptance_rate,97.0
+host_is_superhost,0.0
+host_total_listings_count,58.0
+host_has_profile_pic,1.0
+host_identity_verified,1.0
+latitude,41.389990000000004
+longitude,2.16482
+bathrooms_text,2.0
+beds,5.0
+minimum_nights,1.0
+maximum_nights,1125.0
+has_availability,1.0
+availability_30,0.0
+availability_365,1.0
+number_of_reviews,17.0
+number_of_reviews_ltm,0.0
+instant_bookable,0.0
+calculated_host_listings_count,34.0
+calculated_host_listings_count_private_rooms,0.0
+calculated_host_listings_count_shared_rooms,0.0
+host_exp,9.075975359342916
+verif_phone,1.0
+verif_email,1.0
+has_kitchen,1.0
+has_conditioning,1.0
+has_smart_perks,0.0
+has_workspace,0.0
+parking,0.0
+has_views,0.0
+has_washer,1.0
+has_tv,1.0
+has_elevator,1.0
+outdoor_space,0.0
+has_inet,1.0
+pets_allowed,0.0
+balcony,1.0
+days_since_last_review,979.0
+distance_center,0.547267672865297
+neighbourhood_group_cleansed_Ciutat Vella,0.0
+neighbourhood_group_cleansed_Eixample,1.0
+neighbourhood_group_cleansed_Gràcia,0.0
+neighbourhood_group_cleansed_Horta-Guinardó,0.0
+neighbourhood_group_cleansed_Les Corts,0.0
+neighbourhood_group_cleansed_Nou Barris,0.0
+neighbourhood_group_cleansed_Sant Andreu,0.0
+neighbourhood_group_cleansed_Sant Martí,0.0
+neighbourhood_group_cleansed_Sants-Montjuïc,0.0
+neighbourhood_group_cleansed_Sarrià-Sant Gervasi,0.0
+property_type_entire unit,1.0
+property_type_others,0.0
+property_type_room,0.0
+review_scores_rating_4,0.0
+review_scores_rating_5,1.0
+review_scores_rating_<3,0.0
+review_scores_rating_nan,0.0
+review_scores_accuracy_4,0.0
+review_scores_accuracy_5,1.0
+review_scores_accuracy_<3,0.0
+review_scores_accuracy_nan,0.0
+review_scores_cleanliness_4,0.0
+review_scores_cleanliness_5,1.0
+review_scores_cleanliness_<3,0.0
+review_scores_cleanliness_nan,0.0
+review_scores_checkin_4,0.0
+review_scores_checkin_5,1.0
+review_scores_checkin_<3,0.0
+review_scores_checkin_nan,0.0
+review_scores_communication_4,0.0
+review_scores_communication_5,1.0
+review_scores_communication_<3,0.0
+review_scores_communication_nan,0.0
+review_scores_location_4,0.0
+review_scores_location_5,1.0
+review_scores_location_<3,0.0
+review_scores_location_nan,0.0
+review_scores_value_4,0.0
+review_scores_value_5,1.0
+review_scores_value_<3,0.0
+review_scores_value_nan,0.0
