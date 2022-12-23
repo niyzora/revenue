@@ -3,26 +3,20 @@ import io
 from io import StringIO
 import csv
 import pandas as pd
+from pandas import MultiIndex, Int16Dtype
 import numpy as np
-import dill
+import joblib
 
 app = Flask(__name__)
-
-#input_file = 'model.bin'
-
-#with open(input_file, 'rb') as f_in:
-#    sc, model = joblib.load(f_in)
 
 
 def transform(text_file_contents):
     return text_file_contents.replace("=", ",")
 
 
-dill.load_module('sc_mode.pkl')
-
-
 @app.route('/')
 def form():
+    
     return """
         <html>
             <body>
@@ -49,15 +43,16 @@ def transform_view():
 
     stream = io.StringIO(f.stream.read().decode("UTF8"), newline=None)
     csv_input = csv.reader(stream)
-    # print("file contents: ", file_contents)
-    # print(type(file_contents))
     print(csv_input)
-    for row in csv_input:
-        print(row)
 
+    
     stream.seek(0)
     result = transform(stream.read())
-
+    
+    input_file = 'model_xgb.bin'
+    with open(input_file, 'rb') as f_in:
+        sc, model = joblib.load(f_in)
+    
     # reading the table
     df = pd.read_csv(StringIO(result)).T.reset_index().drop('index', axis=1)
     df.columns = df.iloc[0]
@@ -72,4 +67,4 @@ def transform_view():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0', port = 9696, debug = True)

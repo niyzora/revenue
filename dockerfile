@@ -1,15 +1,15 @@
-FROM python:3.8-slim
+FROM python:3.8.12-slim
 
-EXPOSE 5000
-
-ENV PYTHONDONTWRITEBYTECODE=1
-
-COPY requirements.txt .
-RUN pip install --trusted-host pypi.python.org -r requirements.txt
-
+RUN pip install pipenv
 
 WORKDIR /app
-ADD . /app
 
+COPY ["Pipfile", "Pipfile.lock", "./"]
 
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "wsgi:app"]
+RUN pipenv install --system --deploy
+
+COPY ["app.py", "model_xgb.bin", "./"]
+
+EXPOSE 9696
+
+ENTRYPOINT ["gunicorn", "--bind=0.0.0.0:9696", "app:app"]
